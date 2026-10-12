@@ -1,0 +1,802 @@
+/* ==========================================
+   BASIC
+   ========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: white;
+}
+
+
+/* ==========================================
+   TOP BAR
+   ========================================== */
+
+.top-bar {
+    height: 70px;
+
+    background: #111827;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 25px;
+
+    border-bottom: 1px solid #334155;
+}
+
+.top-bar h1 {
+    font-size: 25px;
+    margin-bottom: 3px;
+}
+
+.top-bar > div:first-child span {
+    color: #94a3b8;
+    font-size: 13px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.user-info > span:first-child {
+    color: #cbd5e1;
+    font-size: 13px;
+}
+
+#onlineCount {
+    color: #22c55e;
+    font-weight: bold;
+}
+
+#currentUsername {
+    color: white;
+    font-weight: bold;
+}
+
+
+/* ==========================================
+   LOGOUT BUTTON
+   ========================================== */
+
+#logoutButton {
+    border: none;
+
+    background: #ef4444;
+    color: white;
+
+    padding: 9px 16px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    font-size: 13px;
+}
+
+#logoutButton:hover {
+    background: #dc2626;
+}
+
+
+/* ==========================================
+   MAIN CONTAINER
+   ========================================== */
+
+.office-container {
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 25px;
+}
+
+.office-header {
+    margin-bottom: 18px;
+}
+
+.office-header h2 {
+    font-size: 22px;
+    margin-bottom: 6px;
+}
+
+.office-header p {
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+
+/* ==========================================
+   OFFICE AREA
+   ========================================== */
+
+.office-area {
+    position: relative;
+
+    width: 100%;
+    height: 550px;
+
+    background: #172033;
+
+    border: 2px solid #334155;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    background-image:
+        linear-gradient(
+            #223047 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            #223047 1px,
+            transparent 1px
+        );
+
+    background-size: 40px 40px;
+}
+
+
+/* ==========================================
+   ZONES
+   ========================================== */
+
+.zone {
+    position: absolute;
+
+    border: 1px dashed #475569;
+
+    border-radius: 10px;
+
+    background: rgba(15, 23, 42, 0.3);
+}
+
+.zone h3 {
+    font-size: 13px;
+
+    color: #cbd5e1;
+
+    padding: 12px;
+}
+
+
+/* ==========================================
+   DEVELOPER AREA
+   ========================================== */
+
+.developer-zone {
+    left: 25px;
+    top: 25px;
+
+    width: 390px;
+    height: 190px;
+}
+
+
+/* ==========================================
+   TEAM AREA
+   ========================================== */
+
+.team-zone {
+    right: 25px;
+    top: 25px;
+
+    width: 390px;
+    height: 190px;
+}
+
+
+/* ==========================================
+   DESKS
+   ========================================== */
+
+.desk {
+    position: absolute;
+
+    width: 130px;
+    height: 70px;
+
+    background: #475569;
+
+    border: 1px solid #64748b;
+
+    border-radius: 8px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 4px;
+
+    font-size: 22px;
+}
+
+.desk span {
+    color: #cbd5e1;
+
+    font-size: 11px;
+}
+
+
+/* DESK POSITIONS */
+
+.desk-one {
+    left: 25px;
+    top: 65px;
+}
+
+.desk-two {
+    right: 25px;
+    top: 65px;
+}
+
+.desk-three {
+    left: 25px;
+    top: 65px;
+}
+
+
+/* ==========================================
+   MEETING ROOM
+   ========================================== */
+
+.meeting-room {
+    position: absolute;
+
+    left: 50%;
+    top: 58%;
+
+    transform: translate(-50%, -50%);
+
+    width: 260px;
+    height: 130px;
+
+    background: #1e293b;
+
+    border: 2px solid #64748b;
+
+    border-radius: 10px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 8px;
+
+    font-size: 25px;
+}
+
+.meeting-room strong {
+    font-size: 14px;
+
+    color: #cbd5e1;
+}
+
+
+/* ==========================================
+   COFFEE AREA
+   ========================================== */
+
+.coffee-area {
+    position: absolute;
+
+    left: 440px;
+    top: 35px;
+
+    width: 100px;
+    height: 60px;
+
+    background: #3f3f46;
+
+    border: 1px solid #52525b;
+
+    border-radius: 8px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 3px;
+
+    font-size: 22px;
+}
+
+.coffee-area span {
+    color: #cbd5e1;
+
+    font-size: 10px;
+}
+
+
+/* ==========================================
+   TEAM BOARD
+   ========================================== */
+
+.whiteboard {
+    position: absolute;
+
+    right: 55px;
+    bottom: 55px;
+
+    width: 130px;
+    height: 65px;
+
+    background: #e2e8f0;
+
+    border: 4px solid #475569;
+
+    border-radius: 5px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 4px;
+
+    color: #334155;
+
+    font-size: 20px;
+}
+
+.whiteboard strong {
+    font-size: 11px;
+}
+
+
+/* ==========================================
+   PLANTS
+   ========================================== */
+
+.plant {
+    position: absolute;
+
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    background: #1e293b;
+
+    border: 1px solid #334155;
+
+    border-radius: 8px;
+
+    font-size: 27px;
+}
+
+.plant-one {
+    left: 30px;
+    bottom: 45px;
+}
+
+.plant-two {
+    right: 230px;
+    top: 275px;
+}
+
+
+/* ==========================================
+   ENTRANCE
+   ========================================== */
+
+.office-entrance {
+    position: absolute;
+
+    left: 50%;
+    bottom: 0;
+
+    transform: translateX(-50%);
+
+    width: 120px;
+    height: 45px;
+
+    background: #334155;
+
+    border: 2px solid #64748b;
+
+    border-bottom: none;
+
+    border-radius: 8px 8px 0 0;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+
+/* ==========================================
+   EMPLOYEE AVATAR
+   ========================================== */
+
+.avatar {
+    position: absolute;
+
+    width: 76px;
+    height: 62px;
+
+    background: #6366f1;
+
+    border: 2px solid #818cf8;
+
+    border-radius: 10px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 3px;
+
+    z-index: 100;
+
+    color: white;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    user-select: none;
+
+    transition:
+        box-shadow 0.15s ease,
+        border-color 0.15s ease;
+}
+
+
+/* ==========================================
+   EMPLOYEE ICON
+   ========================================== */
+
+.employee-icon {
+    font-size: 27px;
+
+    line-height: 1;
+}
+
+
+/* ==========================================
+   NAME TAG
+   ========================================== */
+
+.name-tag {
+    position: absolute;
+
+    top: -25px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    background: #0f172a;
+
+    color: white;
+
+    padding: 4px 8px;
+
+    border-radius: 5px;
+
+    border: 1px solid #475569;
+
+    font-size: 10px;
+
+    white-space: nowrap;
+
+    z-index: 110;
+}
+
+
+/* ==========================================
+   CURRENT USER
+   ========================================== */
+
+.current-user {
+    border-color: white;
+
+    box-shadow:
+        0 0 10px
+        rgba(99, 102, 241, 0.8);
+}
+
+
+/* ==========================================
+   SPEAKING
+   ========================================== */
+
+.avatar.speaking {
+    border-color: #22c55e;
+
+    box-shadow:
+        0 0 15px
+        rgba(34, 197, 94, 0.8);
+}
+
+
+/* ==========================================
+   SPEAKING STATUS
+   ========================================== */
+
+.speaking-status {
+    position: absolute;
+
+    top: 65px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    background: #0f172a;
+
+    color: #22c55e;
+
+    padding: 3px 6px;
+
+    border-radius: 4px;
+
+    font-size: 9px;
+
+    white-space: nowrap;
+
+    z-index: 120;
+}
+
+
+/* ==========================================
+   PROXIMITY STATUS
+   ========================================== */
+
+.proximity-status {
+    position: absolute;
+
+    top: 82px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    background: #0f172a;
+
+    padding: 3px 6px;
+
+    border-radius: 4px;
+
+    font-size: 9px;
+
+    white-space: nowrap;
+
+    z-index: 120;
+}
+
+.proximity-status.nearby {
+    color: #22c55e;
+}
+
+.proximity-status.closer {
+    color: #eab308;
+}
+
+.proximity-status.far {
+    color: #94a3b8;
+}
+
+
+/* ==========================================
+   CONTROLS
+   ========================================== */
+
+.controls {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-top: 18px;
+}
+
+.controls button {
+    min-width: 130px;
+
+    border: none;
+
+    background: #6366f1;
+
+    color: white;
+
+    padding: 11px 20px;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+.controls button:hover {
+    background: #4f46e5;
+}
+
+#micButton {
+    background: #16a34a;
+}
+
+#micButton:hover {
+    background: #15803d;
+}
+
+#audioButton {
+    background: #2563eb;
+}
+
+#audioButton:hover {
+    background: #1d4ed8;
+}
+
+
+/* ==========================================
+   INSTRUCTIONS
+   ========================================== */
+
+.instructions {
+    margin-top: 18px;
+
+    padding: 15px;
+
+    background: #1e293b;
+
+    border: 1px solid #334155;
+
+    border-radius: 8px;
+
+    text-align: center;
+}
+
+.instructions h3 {
+    margin-bottom: 7px;
+
+    font-size: 15px;
+}
+
+.instructions p {
+    color: #94a3b8;
+
+    font-size: 13px;
+
+    margin-top: 5px;
+}
+
+
+/* ==========================================
+   MOBILE
+   ========================================== */
+
+@media (max-width: 700px) {
+
+    .top-bar {
+        height: auto;
+
+        min-height: 70px;
+
+        padding: 12px;
+
+        gap: 10px;
+    }
+
+    .top-bar h1 {
+        font-size: 20px;
+    }
+
+    .user-info {
+        gap: 8px;
+    }
+
+    .user-info > span:first-child {
+        display: none;
+    }
+
+    #currentUsername {
+        font-size: 12px;
+    }
+
+    #logoutButton {
+        padding: 7px 10px;
+    }
+
+    .office-container {
+        padding: 15px;
+    }
+
+    .office-area {
+        height: 450px;
+    }
+
+    .developer-zone,
+    .team-zone {
+        width: 43%;
+        height: 150px;
+    }
+
+    .desk {
+        width: 85px;
+        height: 55px;
+
+        font-size: 18px;
+    }
+
+    .desk span {
+        font-size: 9px;
+    }
+
+    .desk-one,
+    .desk-three {
+        left: 10px;
+        top: 55px;
+    }
+
+    .desk-two {
+        right: 10px;
+        top: 55px;
+    }
+
+    .coffee-area {
+        display: none;
+    }
+
+    .meeting-room {
+        width: 180px;
+        height: 100px;
+    }
+
+    .whiteboard {
+        right: 15px;
+        bottom: 35px;
+    }
+
+    .plant-two {
+        display: none;
+    }
+
+    .controls {
+        gap: 8px;
+    }
+
+    .controls button {
+        min-width: 110px;
+        padding: 10px;
+    }
+
+}

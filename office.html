@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>ProxiSpeak - Virtual Office</title>
+
+    <link
+        rel="stylesheet"
+        href="css/office.css"
+    >
+
+</head>
+
+<body>
+
+    <!-- TOP BAR -->
+
+    <header class="top-bar">
+
+        <div>
+            <h1>ProxiSpeak</h1>
+            <span>Virtual Office</span>
+        </div>
+
+        <div class="user-info">
+
+            <span>
+                🟢 Online:
+                <strong id="onlineCount">1</strong>
+            </span>
+
+            <span id="currentUsername">
+                User
+            </span>
+
+            <button id="logoutButton">
+                Logout
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- MAIN -->
+
+    <main class="office-container">
+
+        <div class="office-header">
+
+            <h2>Virtual Office</h2>
+
+            <p>
+                Move around the office and talk to nearby teammates.
+            </p>
+
+        </div>
+
+
+        <!-- OFFICE -->
+
+        <div
+            id="officeArea"
+            class="office-area"
+        >
+
+            <!-- DEVELOPER AREA -->
+
+            <div class="zone developer-zone">
+
+                <h3>💻 Developer Area</h3>
+
+                <div class="desk desk-one">
+                    💻
+                    <span>Workstation 1</span>
+                </div>
+
+                <div class="desk desk-two">
+                    💻
+                    <span>Workstation 2</span>
+                </div>
+
+            </div>
+
+
+            <!-- TEAM AREA -->
+
+            <div class="zone team-zone">
+
+                <h3>👥 Team Area</h3>
+
+                <div class="desk desk-three">
+                    💻
+                    <span>Workstation 3</span>
+                </div>
+
+            </div>
+
+
+            <!-- MEETING ROOM -->
+
+            <div class="meeting-room">
+
+                🗣️
+
+                <strong>
+                    Meeting Room
+                </strong>
+
+            </div>
+
+
+            <!-- COFFEE -->
+
+            <div class="coffee-area">
+
+                ☕
+
+                <span>
+                    Coffee Area
+                </span>
+
+            </div>
+
+
+            <!-- TEAM BOARD -->
+
+            <div class="whiteboard">
+
+                📋
+
+                <strong>
+                    Team Board
+                </strong>
+
+            </div>
+
+
+            <!-- PLANTS -->
+
+            <div class="plant plant-one">
+                🌱
+            </div>
+
+            <div class="plant plant-two">
+                🪴
+            </div>
+
+
+            <!-- ENTRANCE -->
+
+            <div class="office-entrance">
+
+                🚪 Entrance
+
+            </div>
+
+        </div>
+
+
+        <!-- CONTROLS -->
+
+        <div class="controls">
+
+            <button id="micButton">
+                🎤 Mic On
+            </button>
+
+            <button id="audioButton">
+                🔊 Audio On
+            </button>
+
+        </div>
+
+
+        <!-- INSTRUCTIONS -->
+
+        <div class="instructions">
+
+            <h3>Controls</h3>
+
+            <p>
+                Use
+                <strong>W A S D</strong>
+                or
+                <strong>Arrow Keys</strong>
+                to move.
+            </p>
+
+            <p>
+                🟢 Nearby &nbsp; | &nbsp;
+                🟡 Getting Closer &nbsp; | &nbsp;
+                ⚪ Far Away
+            </p>
+
+        </div>
+
+    </main>
+
+
+    <!-- SOCKET.IO -->
+
+    <script src="http://localhost:5000/socket.io/socket.io.js"></script>
+
+
+    <!-- OFFICE JS -->
+
+    <script src="js/office.js"></script>
+
+</body>
+
+</html>
